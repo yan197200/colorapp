@@ -5,9 +5,9 @@
     <% @colors.each do |color| %>
       <div class="col-sm-12 col-lg-4">
         <%= link_to color, style: "text-decoration:none;" do %>
-          <div class="card my-2">
+          <div class="card my-2" style="background-color: <%= color.name %>;">
             <div class="card-body">
-              <h5 class="card-title" style="color: <%= color.name %>;">
+              <h5 class="card-title">
                 <%= color.name %>
               </h5>
             </div>
