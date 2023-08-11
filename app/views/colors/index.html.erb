@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<div class="container py-5">
+  <h1>Colors</h1>
+  <div class="row">
+    <% @colors.each do |color| %>
+      <div class="col-sm-12 col-lg-4">
+        <%= link_to color, style: "text-decoration:none;" do %>
+          <div class="card my-2">
+            <div class="card-body">
+              <h5 class="card-title" style="color: <%= color.name %>;">
+                <%= color.name %>
+              </h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "New color", new_color_path %>
+</div>
